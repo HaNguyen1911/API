@@ -2,7 +2,6 @@ package models
 
 import (
 	"API/database"
-	"fmt"
 
 	_ "github.com/go-sql-driver/mysql"
 )
@@ -35,7 +34,7 @@ func GetFormByIdHandle(form *ModelForm, id string) (err error) {
 
 // update
 func UpdateFormHandle(form *ModelForm, id string) (err error) {
-	fmt.Println(form)
+	// fmt.Println(form)
 	database.DB.Save(form)
 	return nil
 }
